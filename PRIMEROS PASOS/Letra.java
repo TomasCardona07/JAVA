@@ -1,4 +1,4 @@
-package arraysObjetos;
+
 import java.util.Scanner;
 
 public class Letra {
