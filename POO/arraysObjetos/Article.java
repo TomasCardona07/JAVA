@@ -21,6 +21,6 @@ public class Article {
                 higherPrice = products[i].price;
             }
         }
-        System.out.println("The artcle higher is: " + higherName + " its price is: " + higherPrice);
+        System.out.println("The artcle higher is: " + higherName + ", its price is: " + higherPrice);
     }
 }
