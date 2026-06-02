@@ -5,9 +5,9 @@ public class Letra {
     public static void main(String[] args) {
         Scanner scr = new Scanner(System.in);
         System.out.println("Ingresa una palabra");
-        String palabra = scr.next().toLowerCase();
+        String palabra = scr.next().toLowerCase(); //lo convierte en minuscula
         System.out.println("Ingresa una letra");
-        char letra = scr.next().toLowerCase().charAt(0);
+        char letra = scr.next().toLowerCase().charAt(0); //Funcion char
         int contador = 0;
         for (int i = 0; i < palabra.length(); i++){
             if (palabra.charAt(i) == letra) {
