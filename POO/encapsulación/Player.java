@@ -13,6 +13,10 @@ public class Player {
     public int getHealth(){
         return health;
     }
+    //uso de getter para extraer name
+    public String getName(){
+        return name;
+    }
     //metodo para recibir la vida y calcular el daño
     public void receiveDamage(int damage){
         health -= damage;
@@ -21,6 +25,7 @@ public class Player {
     public static void main(String[] args) {
         Player player1 = new Player("Tomas", 100);
         player1.receiveDamage(30);
-        System.out.println(player1.getHealth()); //Se imprime el metodo del player1
+        System.out.print(player1.getName()+" has "); //se imprime el getName
+        System.out.println(player1.getHealth() + " HP"); //Se imprime el metodo del player1
     }
 }
