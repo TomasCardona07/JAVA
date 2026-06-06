@@ -1,7 +1,7 @@
 package encapsulación;
 
 public class BankcAccount {
-    //Propiedades
+    //Atributos
     private String owner;
     private int balance;
 
