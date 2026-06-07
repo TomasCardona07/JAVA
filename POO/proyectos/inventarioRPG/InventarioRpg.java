@@ -3,7 +3,7 @@ import java.util.Scanner; //Importar escaner
 public class InventarioRpg {
     Scanner src = new Scanner(System.in); //Crear escaner
 
-    //Atributos
+    //Atributos del jugador
     private String nombre;
     private int nivel;
     private Arma[] inventario; //Se crea lista vacia donde se guardaran las armas
