@@ -46,10 +46,10 @@ public class RpgPlayer {
     }
     public static void main(String[] args) {
         RpgPlayer player1 = new RpgPlayer("Tom", 100);
-        player1.receiveDamage(30);
+        player1.receiveDamage(30); //Recibe daño
         System.out.println(player1.getName() +" has received damage");
         System.out.println(player1.getName() +" has " + player1.getHealth() + " Hp");
-        player1.heal(40);
+        player1.heal(40); //Se cura
         System.out.println(player1.getName() +" has been cured");
         System.out.println(player1.getName() + " has " + player1.getHealth() + " HP");
         System.out.println(player1.isAlive());
