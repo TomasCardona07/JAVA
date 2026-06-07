@@ -34,6 +34,16 @@ public class RpgPlayer {
             health = 100;
         }
     }
+
+    //Verificar si el jugador sigue con vida
+    public boolean isAlive(){
+        if (health <= 0) {
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
     public static void main(String[] args) {
         RpgPlayer player1 = new RpgPlayer("Tom", 100);
         player1.receiveDamage(30);
@@ -42,5 +52,6 @@ public class RpgPlayer {
         player1.heal(40);
         System.out.println(player1.getName() +" has been cured");
         System.out.println(player1.getName() + " has " + player1.getHealth() + " HP");
+        System.out.println(player1.isAlive());
     }
 }
