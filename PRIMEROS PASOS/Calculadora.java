@@ -61,7 +61,7 @@ public class Calculadora{
         double num1 = entradas.nextDouble();
         System.out.println("Ingrese el segundo numero para realizar la división");
         double num2 = entradas.nextDouble();
-        while (num2 == 0){
+        while (num2 == 0){     //Validacion porque no se puede dividir por 0
             System.out.println("no se puede dividir por 0");
             System.out.println("Ingresa el segundo numero nuevamente");
             num2 = entradas.nextDouble();
