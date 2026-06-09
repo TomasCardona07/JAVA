@@ -7,8 +7,8 @@ public class Billetes {
         double B100,B50,B20,B10,B5,B2,B1;
         System.out.println("Ingrese el monto en dólares");
         int monto = Integer.parseInt(src.nextLine());
-        B100 = ((int)(monto/100)); //Se trunca y se queda con la parte entera
-        monto %= 100; //Se queda con la parte restante
+        B100 = ((int)(monto/100)); // "(int)" lo trunca y se queda con la parte entera
+        monto %= 100; // "%" Se queda con la parte restante
         System.out.println("Se necesita " + B100 + " Billetes de 100 Dolares");
         B50 = ((int)(monto / 50));
         monto %= 50;
