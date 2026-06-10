@@ -7,6 +7,11 @@ public class Billetes {
         double B100,B50,B20,B10,B5,B2,B1;
         System.out.println("Ingrese el monto en dólares");
         int monto = Integer.parseInt(src.nextLine());
+        while (monto <= 0) {
+            System.out.println("Valor del monto incorrecto");
+            System.out.println("Ingrese el monto nuevamente");
+            monto = Integer.parseInt(src.nextLine());
+        }
         B100 = ((int)(monto/100)); // "(int)" lo trunca y se queda con la parte entera
         monto %= 100; // "%" Se queda con la parte restante
         System.out.println("Se necesita " + B100 + " Billetes de 100 Dolares");
