@@ -32,7 +32,7 @@ public class Calculadora{
     }
 
     //Funcion suma:
-    static double suma(Scanner entradas){
+    static double suma(Scanner entradas){ //Se ingresa el Scanner en cada funcion
         System.out.println("Ingrese el primer numero para realizar la suma");
         double num1 = entradas.nextDouble();
         System.out.println("Ingrese el segundo numero para realizar la suma");
@@ -40,7 +40,7 @@ public class Calculadora{
         return(num1 + num2);
     }
     //Funcion resta:
-    static double resta(Scanner entradas){
+    static double resta(Scanner entradas){ //Se ingresa el Scanner en cada funcion
         System.out.println("Ingrese el primer numero para realizar la resta");
         double num1 = entradas.nextDouble();
         System.out.println("Ingrese el segundo numero para realizar la resta");
@@ -48,7 +48,7 @@ public class Calculadora{
         return(num1 - num2);
     }
     //Funcion multiplicación:
-    static double multiplicacion(Scanner entradas){
+    static double multiplicacion(Scanner entradas){ //Se ingresa el Scanner en cada funcion
         System.out.println("Ingrese el primer numero para realizar la multiplicación");
         double num1 = entradas.nextDouble();
         System.out.println("Ingrese el segundo numero para realizar la multiplicación");
@@ -56,12 +56,12 @@ public class Calculadora{
         return(num1 * num2);
     }
     //Funcion división:
-    static double division(Scanner entradas){
+    static double division(Scanner entradas){ //Se ingresa el Scanner en cada funcion
         System.out.println("Ingrese el primer numero para realizar la división");
         double num1 = entradas.nextDouble();
         System.out.println("Ingrese el segundo numero para realizar la división");
         double num2 = entradas.nextDouble();
-        while (num2 == 0){
+        while (num2 == 0){     //Validacion porque no se puede dividir por 0
             System.out.println("no se puede dividir por 0");
             System.out.println("Ingresa el segundo numero nuevamente");
             num2 = entradas.nextDouble();
