@@ -1,7 +1,7 @@
 package proyectos.academia;
-import java.util.Scanner;
 public class Academy {
     Student student;
+    int ages [];
     Academy(Student student){
         this.student = student;
     }
