@@ -2,10 +2,13 @@ package proyectos.academia;
 import java.util.Scanner;
 
 public class Student {
-    Scanner src = new Scanner(System.in);
+    Scanner src = new Scanner(System.in); //Scanner
+    //=====Atributos=====
     String name;
     double score;
     int age;
+
+    //======= CONSTRUCTOR =======   
     Student(String name, double score, int age){
         this.name = name;
         this.score = score;
@@ -33,7 +36,7 @@ public class Student {
     }
     
 
-    // ========RECIBIR EDAD DEL ALUMNO ==========
+    // ======== RECIBIR EDAD DEL ALUMNO ==========
     public static int ageStudent(Scanner src){
         System.out.println("Enter age's student");
         int age = Integer.parseInt(src.nextLine());
