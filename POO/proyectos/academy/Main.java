@@ -1,6 +1,9 @@
 package proyectos.academy;
+
 import java.util.Scanner; //Importar Scanner
 import java.util.ArrayList; //Importar Arrays
+
+
 public class Main {
 
     public static void main(String[] args) {
@@ -11,11 +14,11 @@ public class Main {
         String name;
         int age;
         double score;
-        double highestScore = 0;
+        double highestScore = -1;
         String nameHighest = "n";
         int older = 0;
         String nameOlder = "n";
-        int younger = 99;
+        int younger = 999;
         String nameYounger = "n";
         double average = 0;
         int aprStudents = 0;
@@ -41,6 +44,8 @@ public class Main {
             Student student = new Student(name, score, age);
             students.add(student);
         }
+
+
         // ======== ALMACENAR REQUISITOS =============
         for (Student student : students){
             if (student.score > highestScore) {
@@ -66,6 +71,36 @@ public class Main {
         average /= students.size();
         System.out.println("registered students: " + students.size()); //Estudiantes registrados
 
+
+        // ========= BUSQUEDA DE ESTUDIANTE ===========
+        System.out.println("Are you looking for a specific student?");
+        System.out.println("YES = 'Y'          NO = 'N'");
+        String lookingStudent = src.nextLine().toUpperCase();
+        while (!lookingStudent.startsWith("Y") && !lookingStudent.startsWith("N")) {
+            System.out.println("Invalid data, please enter the data again");
+            lookingStudent = src.nextLine().toUpperCase();
+        }
+        if (lookingStudent.startsWith("Y")) {
+            System.out.println("Enter name of the student you wanto search for");
+            String findStudent = src.nextLine().toLowerCase();
+            Boolean studentFound = false;
+            for (int i = 0; i < students.size(); i++){
+                if (students.get(i).name.equals(findStudent)) {
+                    System.out.println("Student found!!");
+                    System.out.println("Name: " + students.get(i).name);
+                    System.out.println("Age: " + students.get(i).age);
+                    System.out.println("Score: " + students.get(i).score);
+                    studentFound = true;
+                    break;
+                }
+            }
+            if (studentFound == false) {
+            System.out.println("Student not found");
+            }
+        }
+    
+
+
         // ========= MOSTRAR DATOS DE TODOS LOS ALUMNOS ===========
         System.out.println("STUDENT'S LIST:");
         for (int i = 0; i < students.size(); i++){
@@ -79,20 +114,16 @@ public class Main {
         //========== SALIDAS ============
         System.out.println("Best student:");
         System.out.println(nameHighest + " - Score: " + highestScore);
+        System.out.println("=====================");
         System.out.println("Younger student:");
         System.out.println(nameYounger + " - age: " + younger);
+        System.out.println("=====================");
         System.out.println("Older student:");
         System.out.println(nameOlder + " - age: " + older);
+        System.out.println("=====================");
         System.out.println("Gropu average: " + average );
         System.out.println("Approbated: " + aprStudents);
         System.out.println("Failed: " + failStudents);
-
-        /* PENDIENTE:
-        - busquedas de estudiantes
-        -consulta de numero de estudiantes
-        - Validar proyecto
-         */
-    
         src.close();
     }
 }

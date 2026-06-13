@@ -17,7 +17,7 @@ public class Student {
 
     // ======= RECIBIR NOMBRE DEL ALUMNO ==========
     public static String nameStudent(Scanner src){
-        String name = src.nextLine();
+        String name = src.nextLine().toLowerCase();
         return name;
     }
 
