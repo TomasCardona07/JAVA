@@ -61,7 +61,7 @@ public class Main {
             else{
                 failStudents++;
             }
-            average /= student.score;
+            average += student.score;
         }
         average /= students.size();
         System.out.println("registered students: " + students.size()); //Estudiantes registrados
