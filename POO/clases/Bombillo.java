@@ -1,7 +1,7 @@
 package clases;
 public class Bombillo {
     boolean encendido;
-    void brillar(){
+    public void brillar(){
         encendido = true;
         System.out.println("Lampara prendida");
     }

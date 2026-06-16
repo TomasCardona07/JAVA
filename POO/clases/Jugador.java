@@ -2,7 +2,7 @@ package clases;
 public class Jugador {
     String nombre;
     int vidas;
-    void atacar(){
+    public void atacar(){
         System.out.println(nombre + " ataca");
     }
     void vida(){

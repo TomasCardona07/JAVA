@@ -2,7 +2,7 @@ package clases;
 public class Gato {
     String nombre;
     int edad;
-    void maullar(){
+    public void maullar(){
         System.out.println("Miau Miau");
     }
     public static void main(String[] args) {
