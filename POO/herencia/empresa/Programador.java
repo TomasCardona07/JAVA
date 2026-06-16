@@ -12,7 +12,7 @@ public class Programador extends Empleado {
     }
 
     
-    // ========= NUEVA ACCION ===========
+    // ========= NUEVA ACCION SIN OVERRIDE ===========
     public void infoProgramador(){
         mostrarInfo(); // ACCION DE CLASE PADRE
         System.out.println("SOLO " + lengFav);
