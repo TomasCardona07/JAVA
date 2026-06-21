@@ -1,6 +1,6 @@
 package proyectos.torneoRPG;
 
-// ========== CLASE PADRE ========
+// ========== CLASE PADRE ===========
 public abstract class Personaje {
 
     // ====== ATRIBUTOS PROTEGIDOS ========
