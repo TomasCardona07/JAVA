@@ -14,6 +14,6 @@ public abstract class Personaje {
         this.vida = vida;
     }
     
-    // ====== METODO ABSTRACTO: ATACAR ==========
+    // ======= METODO ABSTRACTO: ATACAR ==========
     public abstract void atacar();
 }
