@@ -9,6 +9,7 @@ public class Arquero extends Personaje { //Hija, hereda de Personaje
     }
 
     // ======= METODO ATACAR =========
+    @Override
     public void atacar(){
         System.out.println(nombre + " Lanza un flechazo");
     }

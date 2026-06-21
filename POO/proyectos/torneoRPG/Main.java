@@ -25,7 +25,7 @@ public class Main {
             switch (accion) {
                 case 1:
                     System.out.println("Ingresa el nombre del participante");
-                    String nombre = scr.nextLine();
+                    String nombre = scr.nextLine().toLowerCase();
                     System.out.println("Ingresa el nivel del participante");
                     int nivel = Integer.parseInt(scr.nextLine());
                     if (nivel <= 0) {
@@ -83,19 +83,27 @@ public class Main {
                 case 5:
                     if (!participantes.isEmpty()) {
                         System.out.println("Ingrese el nombre del usuario que desea buscar");
+                        Metodos.buscarPartic(participantes,scr);
+                    }
+                    else{
+                        System.out.println("No hay participantes aun");
+                    }
+                    break;
+                case 6:
+                    if (!participantes.isEmpty()) {
+                        for (Personaje personaje : participantes) {
+                            personaje.atacar();
+                            System.out.println("----------------");
+                        }
                     }
                     else{
                         System.out.println("No hay participantes aun");
                     }
                     break;
                 default:
+                    System.out.println("GRACIAS POR USAR NUESTRO SISTEMA :)");
                     break;
             }
         }
     }
 }
-/*
-    PENDIENTE:
-- Terminar los puntos 5 y 6
-- Documentar metodos acciones
-- Hacerle prueba al terminar */

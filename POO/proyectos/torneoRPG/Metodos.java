@@ -53,4 +53,24 @@ public class Metodos {
         }
         return masVidaNombre;
     }
+
+    //========== BUSCAR PARTICIPANTE =========
+    public static Boolean buscarPartic(ArrayList<Personaje> participantes, Scanner scr){
+        boolean participanteEncontrado = false;
+        String encontrarParticipante = scr.nextLine().toLowerCase();
+        for (Personaje personaje : participantes) {
+            if (encontrarParticipante.equals(personaje.nombre)) {
+                System.out.println("¡¡¡PARTICIPANTE ENCONTRADO!!!");
+                System.out.println("Nombre : "+ personaje.nombre);
+                System.out.println("NIVEL: "+ personaje.nivel);
+                System.out.println("PUNTOS DE VIDA: " + personaje.vida);
+                participanteEncontrado = true;
+                break;
+            }
+        }
+        if (participanteEncontrado == false) {
+            System.out.println("PARTICIPANTE NO ENCONTRADO");
+        }
+        return participanteEncontrado;
+    }
 }

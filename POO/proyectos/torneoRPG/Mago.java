@@ -8,6 +8,7 @@ public class Mago extends Personaje { //Hija, hereda de Personaje
     }
 
     // ======= METODO ATACAR =========
+    @Override
     public void atacar(){
         System.out.println(nombre + " Lanza un hechizo");
     }

@@ -9,6 +9,7 @@ public class Guerrero extends Personaje { //Hija, hereda de Personaje
     }
 
     // ======= METODO ATACAR =========
+    @Override
     public void atacar(){
         System.out.println(nombre + " pega con su espada");
     }
