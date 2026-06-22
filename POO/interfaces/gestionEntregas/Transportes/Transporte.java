@@ -9,11 +9,12 @@ public abstract class Transporte {
         this.nombre = nombre;
         this.velMax = velMax;
     }
-    protected String getNombre(){
+    public String getNombre(){
         return this.nombre; 
     }
 
-    protected int getVelMax(){
+    public int getVelMax(){
         return this.velMax;
     }
+    public abstract void entregar();
 }

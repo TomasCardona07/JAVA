@@ -4,7 +4,7 @@ import interfaces.gestionEntregas.Interfaces.Entregable;
 
 public class Moto extends Transporte implements Entregable {
 
-    Moto(String nombre, int velMax){
+    public Moto(String nombre, int velMax){
         super(nombre, velMax);
     }
 

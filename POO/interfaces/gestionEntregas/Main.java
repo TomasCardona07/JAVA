@@ -25,9 +25,53 @@ public class Main {
             }
             switch (accion) {
                 case 1:
-                    
+                    System.out.println("¿Cuál medio de transporte deseas registrar?");
+                    System.out.println("[1] Camión");
+                    System.out.println("[2] Moto");
+                    System.out.println("[3] Dron");
+                    int eleccTransp = Integer.parseInt(scr.nextLine());
+                    while (eleccTransp < 1 || eleccTransp > 3) {
+                        System.out.println("Numero no valido, ingreselo nuevamente");
+                        eleccTransp = Integer.parseInt(scr.nextLine());
+                    }
+                    System.out.println("Ingresa el nombre del Vehiculo");
+                    String nombre = scr.nextLine().toLowerCase();
+                    System.out.println("Ingresa la velocidad maxima");
+                    int velMax = Integer.parseInt(scr.nextLine());
+                    switch (eleccTransp) {
+                        case 1:
+                            transportes.add(new Camion(nombre, velMax));
+                            break;
+                        case 2:
+                            transportes.add(new Moto(nombre, velMax));
+                            break;
+                        default:
+                            transportes.add(new Dron(nombre, velMax));
+                            break;
+                    }
                     break;
-            
+                case 2:
+                    if (!transportes.isEmpty()) {
+                        for (Transporte transporte : transportes) {
+                            System.out.println("Nombre: "+transporte.getNombre());
+                            System.out.println("Vel Máxima: "+transporte.getVelMax());
+                            System.out.println("=============================");
+                        }
+                    }
+                    else{
+                        System.out.println("No hay vehiculos registrados");
+                    }
+                    break;
+                case 3:
+                    if (!transportes.isEmpty()) {
+                        for (Transporte transporte : transportes) {
+                            transporte.entregar();
+                        }
+                    }
+                    else{
+                        System.out.println("No hay vehiculos registrados");
+                    }
+                    break;
                 default:
                     break;
             }

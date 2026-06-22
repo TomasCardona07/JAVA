@@ -5,7 +5,7 @@ import interfaces.gestionEntregas.Interfaces.Volador;
 
 public class Dron extends Transporte implements Volador, Entregable {
 
-    Dron(String nombre, int velMax){
+    public Dron(String nombre, int velMax){
         super(nombre, velMax);
     }
 
