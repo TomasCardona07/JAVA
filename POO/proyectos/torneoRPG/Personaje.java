@@ -1,6 +1,6 @@
 package proyectos.torneoRPG;
 
-// ========== CLASE PADRE ========
+// ========== CLASE PADRE ===========
 public abstract class Personaje {
 
     // ====== ATRIBUTOS PROTEGIDOS ========
@@ -14,6 +14,6 @@ public abstract class Personaje {
         this.vida = vida;
     }
     
-    // ====== METODO ABSTRACTO: ATACAR ==========
+    // ======= METODO ABSTRACTO: ATACAR ==========
     public abstract void atacar();
 }
