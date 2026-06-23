@@ -1,5 +1,5 @@
 package interfaces.gestionEntregas.Interfaces;
 
 public interface Entregable {
-    public void entregar();
+    public void entregar(); // ACCION ENTREGAR
 }

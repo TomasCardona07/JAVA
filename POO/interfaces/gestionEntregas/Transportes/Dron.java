@@ -1,10 +1,10 @@
 package interfaces.gestionEntregas.Transportes;
 
-import interfaces.gestionEntregas.Interfaces.Entregable;
-import interfaces.gestionEntregas.Interfaces.Volador;
+import interfaces.gestionEntregas.Interfaces.*; // SE IMPORTAN LAS INTERFACES
 
-public class Dron extends Transporte implements Volador, Entregable {
+public class Dron extends Transporte implements Volador, Entregable { // HEREDA DE TRANSPORTE Y TIENE LAS INTERFACES DE ENTREGABLE Y VOLADOR
 
+    //=========== CONSTRUCTOR =============
     public Dron(String nombre, int velMax){
         super(nombre, velMax);
     }
@@ -21,6 +21,8 @@ public class Dron extends Transporte implements Volador, Entregable {
         System.out.println(getNombreVol() + " esta Volando");
     }
 
+
+    // ========= ENTREGAR =========
     @Override
     public void entregar(){
         System.out.println(getNombre() + " Entregó un paquete");

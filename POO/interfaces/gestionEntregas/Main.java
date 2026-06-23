@@ -1,6 +1,5 @@
 package interfaces.gestionEntregas;
 import interfaces.gestionEntregas.Transportes.*; // importa la carpeta de transportes
-import interfaces.gestionEntregas.Interfaces.*; // Importa la carpeta de interfaces
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -25,19 +24,12 @@ public class Main {
             }
             switch (accion) {
                 case 1:
-                    System.out.println("¿Cuál medio de transporte deseas registrar?");
-                    System.out.println("[1] Camión");
-                    System.out.println("[2] Moto");
-                    System.out.println("[3] Dron");
-                    int eleccTransp = Integer.parseInt(scr.nextLine());
-                    while (eleccTransp < 1 || eleccTransp > 3) {
-                        System.out.println("Numero no valido, ingreselo nuevamente");
-                        eleccTransp = Integer.parseInt(scr.nextLine());
-                    }
-                    System.out.println("Ingresa el nombre del Vehiculo");
-                    String nombre = scr.nextLine().toLowerCase();
+                    int eleccTransp = Metodos.validacionTransporte(scr); //EJECUTA Y VALIDA EL NUMERO INGRESADO
+                    String nombre = Metodos.validarNombre(transportes, scr); //Valida si hay nombre repetido
                     System.out.println("Ingresa la velocidad maxima");
                     int velMax = Integer.parseInt(scr.nextLine());
+
+                    // CREA EL VEHICULO SEGÚN ELECCIÓN DEL USUARIO
                     switch (eleccTransp) {
                         case 1:
                             transportes.add(new Camion(nombre, velMax));
@@ -52,11 +44,7 @@ public class Main {
                     break;
                 case 2:
                     if (!transportes.isEmpty()) {
-                        for (Transporte transporte : transportes) {
-                            System.out.println("Nombre: "+transporte.getNombre());
-                            System.out.println("Vel Máxima: "+transporte.getVelMax());
-                            System.out.println("=============================");
-                        }
+                        Metodos.mostrarVehiculos(transportes); // FUNCIÓN MOSTRAR VEHICULOS
                     }
                     else{
                         System.out.println("No hay vehiculos registrados");
@@ -65,7 +53,7 @@ public class Main {
                 case 3:
                     if (!transportes.isEmpty()) {
                         for (Transporte transporte : transportes) {
-                            transporte.entregar();
+                            transporte.entregar(); //MUESTRA LOS VEHICULOS QUE ENTREGAN
                         }
                     }
                     else{
@@ -74,11 +62,7 @@ public class Main {
                     break;
                 case 4:
                     if (!transportes.isEmpty()) {
-                        for (Transporte transporte : transportes) {
-                            if (transporte instanceof Volador) {
-                                ((Volador)transporte).volar();
-                            }
-                        }
+                        Metodos.mostrarVoladores(transportes); //MUESTRA LOS VEHICULOS QUE VUELAN
                     }
                     else{
                         System.out.println("No hay vehiculos registrados");
@@ -86,23 +70,17 @@ public class Main {
                     break;
                 case 5:
                     if (!transportes.isEmpty()) {
-                        System.out.println("Ingrese el nombre del vehiculo que desea buscar");
-                        String buscarVehiculo = scr.nextLine().toLowerCase();
-                        for (Transporte transporte : transportes) {
-                            if (transporte.getNombre().equals(buscarVehiculo)) {
-                                System.out.println("Vehiculo encontrado");
-                                System.out.println("NOMBRE: " + transporte.getNombre());
-                                System.out.println("VELOCIDAD MAXIMA: " + transporte.getVelMax());
-                            }
-                        }
+                        Metodos.buscarVehiculos(transportes, scr); // BUSCA Y MUESTRA EL VEHICULO
                     }
                     else{
-                        System.out.println("No hay vehiculos regitrados");
+                        System.out.println("No hay vehiculos registrados");
                     }
                     break;
                 default:
+                    System.out.println("GRACIAS POR USAR NUESTRO SISTEMA :)");
                     break;
             }
         }
+        scr.close();
     }
 }
