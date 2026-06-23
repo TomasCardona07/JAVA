@@ -9,9 +9,16 @@ public class Dron extends Transporte implements Volador, Entregable {
         super(nombre, velMax);
     }
 
+
+    public String getNombreVol(){
+        return getNombre();
+    }
+
+
+
     @Override
     public void volar(){
-        System.out.println(getNombre() + " esta volando");
+        System.out.println(getNombreVol() + " esta Volando");
     }
 
     @Override

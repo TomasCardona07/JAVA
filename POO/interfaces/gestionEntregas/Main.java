@@ -72,6 +72,34 @@ public class Main {
                         System.out.println("No hay vehiculos registrados");
                     }
                     break;
+                case 4:
+                    if (!transportes.isEmpty()) {
+                        for (Transporte transporte : transportes) {
+                            if (transporte instanceof Volador) {
+                                ((Volador)transporte).volar();
+                            }
+                        }
+                    }
+                    else{
+                        System.out.println("No hay vehiculos registrados");
+                    }
+                    break;
+                case 5:
+                    if (!transportes.isEmpty()) {
+                        System.out.println("Ingrese el nombre del vehiculo que desea buscar");
+                        String buscarVehiculo = scr.nextLine().toLowerCase();
+                        for (Transporte transporte : transportes) {
+                            if (transporte.getNombre().equals(buscarVehiculo)) {
+                                System.out.println("Vehiculo encontrado");
+                                System.out.println("NOMBRE: " + transporte.getNombre());
+                                System.out.println("VELOCIDAD MAXIMA: " + transporte.getVelMax());
+                            }
+                        }
+                    }
+                    else{
+                        System.out.println("No hay vehiculos regitrados");
+                    }
+                    break;
                 default:
                     break;
             }
