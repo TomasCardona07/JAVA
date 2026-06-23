@@ -1,6 +1,6 @@
 package interfaces.gestionEntregas;
-import interfaces.gestionEntregas.Transportes.*;
-import interfaces.gestionEntregas.Interfaces.*;
+import interfaces.gestionEntregas.Transportes.*; // importa la carpeta de transportes
+import interfaces.gestionEntregas.Interfaces.*; // Importa la carpeta de interfaces
 import java.util.Scanner;
 import java.util.ArrayList;
 
