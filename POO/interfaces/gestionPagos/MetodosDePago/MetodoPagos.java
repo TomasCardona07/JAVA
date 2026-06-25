@@ -1,10 +1,10 @@
-package interfaces.gestionPagos;
+package interfaces.gestionPagos.MetodosDePago;
 
 public abstract class MetodoPagos {
     private String nombre;
     private int identificador;
 
-    MetodoPagos(String nombre, int identificador){
+    public MetodoPagos(String nombre, int identificador){
         this.nombre = nombre;
         this.identificador = identificador;
     }
