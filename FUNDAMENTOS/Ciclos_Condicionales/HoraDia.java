@@ -1,3 +1,4 @@
+package Ciclos_Condicionales;
 import java.util.Scanner; //Importar Scanner
 
 public class HoraDia {
