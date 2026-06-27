@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Combinacion_ciclo {
     public static void main(String[] args) {
         Scanner scr = new Scanner(System.in);
-        int num = -1;
+        int num = - 1;
         while (num < 1){
             try {
                 System.out.println("Ingresa un numero positivo");
@@ -12,7 +12,7 @@ public class Combinacion_ciclo {
                     System.out.println("Numero incorrecto");
                 }
                 else{
-                    System.out.println("Felicidades");
+                    System.out.println("BIEN");
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Ingrese un numero por favor");
