@@ -10,7 +10,8 @@ public class Numero {
         } catch (NumberFormatException e) {
             System.out.println("Ingrese numero");
         }
-
+        num = 1;
+        System.out.println(num + " es 1"); // <- Para que cierre advertencia de variable
         scr.close();
     }
 }
