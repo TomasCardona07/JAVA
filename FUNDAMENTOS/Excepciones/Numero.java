@@ -7,7 +7,7 @@ public class Numero {
         try {
             System.out.println("Ingresa un numero");
             num = Integer.parseInt(scr.nextLine());
-        } catch (NumberFormatException e) {
+        } catch (NumberFormatException e) { // NumberFormatException: excepción de Strings en datos numéricos
             System.out.println("Ingrese numero");
         }
         num = 1;
