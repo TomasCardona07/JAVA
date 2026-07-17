@@ -1,2 +1,3 @@
 Hola, soy Tomi 
 Estoy aprendiendo persistencia
+Estoy empezando con archivos de texto :)
