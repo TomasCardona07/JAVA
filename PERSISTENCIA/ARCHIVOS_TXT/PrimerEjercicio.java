@@ -15,5 +15,6 @@ public class PrimerEjercicio {
         } catch (Exception e) {
             System.err.println("FALLÓ ESTA VUELTA");
         }
+        // Pendiente: Aprender a leer archivos y crear objetos nuevamente
     }
 }
