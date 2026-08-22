@@ -1,5 +1,0 @@
-package PERSISTENCIA.archivos_txt.maven;
-
-public class Maven {
-    //EN ESTA CLASE SE APRENDERA EL USO DE MAVEN ANTES DE IMPLEMENTAR EN PROYECTOSñ
-}
